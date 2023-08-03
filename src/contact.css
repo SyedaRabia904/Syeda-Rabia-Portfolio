@@ -1,0 +1,101 @@
+.parent__container2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container2 {
+    flex-wrap: wrap;
+    width: 30em;
+    margin: 0;
+    max-width: 100%; /* Allow the container to take full width on smaller screens */
+    padding: 0 1rem; /* Add some horizontal padding to avoid elements sticking to the edges */
+  }
+  
+  .head__section img {
+    display: block;
+    margin: 0 auto;
+    height: 5rem;
+    width: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .head__section p {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .social__links ul li {
+    width: 100%;
+    margin: 1.2rem 0;
+    padding: 0.4rem 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0);
+    border-radius: 5px;
+    transition: background 0.25s;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 0 0.8rem rgba(255, 255, 255, 0.12);
+  }
+  
+  .js-tilt-glare {
+    border-radius: 5px;
+  }
+  
+  .social__links ul li a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  .social__links ul li a i {
+    text-align: center;
+    line-height: 4rem;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+    transform: scale(1.4) translateZ(50px);
+    transition: 0.25s;
+    margin-right: 5%;
+  }
+  
+  .social__links ul li a span {
+    line-height: 1.4rem;
+  }
+  
+  .social__links ul .gmail:hover {
+    background: #c71610;
+  }
+  
+  .social__links ul .instagram:hover {
+    background: linear-gradient(to right, #f9ce34, #ee2a7b, #6228d7);
+  }
+  
+  .social__links ul .linkedin:hover {
+    background: #0a66c2;
+  }
+  
+  .social__links ul .facebook:hover {
+    background: #3b5998;
+  }
+  
+  .social__links ul .github:hover {
+    background: #333;
+  }
+  
+  @media only screen and (max-width: 549px) {
+    .container {
+      width: 88vw;
+      
+    }
+  }
+  

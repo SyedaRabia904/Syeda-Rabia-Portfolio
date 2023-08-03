@@ -1,0 +1,159 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Change to three columns layout */
+    gap: 20px; /* Add a gap between the cards */
+    justify-content: center;
+    align-items: start; /* Align items to the start of the container */
+    margin-bottom: 10%;
+  }
+  
+  .box-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0;
+  }
+  
+  .widget-container {
+    transition: all 0.3s ease;
+  }
+  
+  .widget-container .common-flip-style {
+    width: 325px;
+    height: 425px;
+    cursor: pointer;
+  }
+  
+  .widget-container .common-flip-style .common-box-style {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    border-radius: 10px;
+    width: 100%;
+  height: 100%;
+  /* Updated styles to ensure the image fits the card */
+  background-position: center;
+  background-size: 100% 100%; /* Set the width and height to 100% */
+  background-repeat: no-repeat;
+  }
+  
+  .flip-box {
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box .box-front {
+    transform: none;
+    z-index: 1;
+
+    background-image: url('portfolio.png');
+
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .flip-box .box-back {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    transform: rotateX(0) rotateY(-180deg);
+    background: #294187;
+  }
+  
+  .flip-box:hover .box-front {
+    transform: rotateX(0) rotateY(180deg);
+  }
+  
+  .flip-box:hover .box-back {
+    transform: none;
+  }
+  
+  .box-content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    text-align: center;
+    transform: translateZ(90px);
+  }
+  
+  .flip-box1 .box-front {
+    transform: none;
+    z-index: 1;
+    background-image: url('fnf.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+  
+  .flip-box3 .box-front {
+    transform: none;
+    z-index: 1;
+    background-image: url('calculator.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+  
+  /* Add a media query to adjust the layout for smaller screens */
+  @media (max-width: 786px) {
+    .container {
+      grid-template-columns: 1fr; /* Change to one column layout for smaller screens */
+      justify-items: center; /* Center the items horizontally */
+      align-items: center; /* Center the items vertically */
+    }
+
+    .widget-container .common-flip-style {
+    width: 225px;
+    height: 300px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 820px) {
+  .container {
+    align-items: center;
+    
+  }
+  .widget-container .common-flip-style {
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+  }
+  
+}
+@media (max-width: 903px) {
+  .container {
+    align-items: center;
+    
+  }
+  .widget-container .common-flip-style {
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+  }
+  
+}
+@media (max-width: 973px) {
+  .container {
+    align-items: center;
+    
+  }
+  .widget-container .common-flip-style {
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+  }
+  
+}

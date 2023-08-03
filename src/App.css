@@ -1,0 +1,350 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Italianno', cursive;
+  color: white;
+}
+
+.bg {
+  width: 100vw !important;
+  height: 100vh !important;
+  
+  position: fixed;
+
+  z-index: -1;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  background-color: transparent;
+  color: #fff;
+}
+
+.nav-links a {
+  text-decoration: none;
+}
+
+.logo {
+  width: 25%;
+  height: 2%;
+}
+
+/* Add margin to .menu to create distance from the end of the screen */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  margin-right: 5%;
+  margin-bottom: 20px;
+  /* Add margin to create distance from the end of the screen */
+}
+
+/* Add padding to the navbar to create distance from the right edge of the screen */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  color: #fff;
+  padding-right: 20px;
+  /* Add padding to create distance from the right edge of the screen */
+}
+
+/* Add padding to the header to create distance from the right edge of the screen */
+header {
+  padding-right: 20px;
+  /* Add padding to create distance from the right edge of the screen */
+}
+
+
+
+input[type=checkbox] {
+  display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+  color: var(--clr-neon);
+}
+
+
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: transparent;
+    transition: 0.3s ease;
+  }
+
+  .menu li+li {
+    margin-top: 12px;
+  }
+
+  input[type=checkbox]:checked~.menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: transparent;
+  }
+
+  .logo {
+    width: 35%;
+    height: 10%;
+  }
+
+  .bg {
+    width: 100% !important;
+    height: 100% !important;
+    
+    position: fixed;
+  
+    z-index: -1;
+    text-decoration: none;
+  }
+  @media (max-width: 768px) {
+    .line-1 {
+      padding-left: 6px !important;
+      font-size: 1rem !important;
+      margin-top: 30px !important;
+    }
+  }
+  
+  }
+  
+
+
+:root {
+  --clr-neon: hsl(207, 91%, 45%);
+  /* Change the hue (first value) to 207 for a blue color */
+  --clr-bg: hsl(210, 21%, 16%);
+  /* Change the hue (first value) to 210 for a different shade of blue */
+  --bg-color: hsl(49 37% 94%);
+  --typewriterSpeed: 6s;
+  --typewriterCharacters: 24;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.neon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.15rem;
+  width: 10vw;
+  height: 8vh;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--clr-neon);
+  border: var(--clr-neon) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+  position: relative;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.neon-button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--clr-neon);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+
+.neon-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--clr-neon);
+  opacity: 0;
+  background-color: var(--clr-neon);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.neon-button:hover::before,
+.neon-button:focus::before {
+  opacity: 1;
+}
+
+.neon-button:hover::after,
+.neon-button:focus::after {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .neon-button {
+    width: 80vw;
+    /* Set the width to 80% of the viewport width for smaller screens */
+    max-width: 170px;
+    /* Limit the maximum width for smaller screens */
+    margin: 0 auto;
+    /* Center the button horizontally */
+    height: 6vh;
+    /* Set the height to 10% of the viewport height for smaller screens */
+  }
+
+  .neon-button::before {
+    top: 100%;
+    /* Adjust vertical position for smaller screens */
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.25);
+    /* Adjust the transformation for smaller screens */
+  }
+}
+
+input[type=checkbox]:checked~.intro {
+  display: none;
+}
+
+.line-1 {
+  position: relative;
+  top: 50%;
+  left: 50%; /* Set the left position to 50% */
+  transform: translate(-50%, -50%); /* Center the element using negative translations */
+  width: 24em;
+  margin-top: 100px;
+  /* Adjust the distance from the navbar as per your requirement */
+  text-align: left;
+  padding-left: 80px;
+  /* Adjust the left padding to create some distance from the left side */
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 180%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: -25px;
+}
+
+
+.anim-typewriter {
+  animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 19em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #333;
+  position: fixed;
+  /* Change 'absolute' to 'fixed' to stick the footer to the bottom of the viewport */
+  bottom: 0;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Style the heart icon */
+.fa-fa-heart {
+  font-size: 30px;
+  margin: 0 5px;
+  vertical-align: middle;
+  color: var(--clr-neon);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  /* Adjust the width as needed */
+  height: 3px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px var(--clr-bg);
+  -webkit-border-radius: 10px;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 15px;
+  background: var(--clr-neon);
+  box-shadow: inset 0 0 6px var(--clr-bg);
+}
+
+/* Handle when inactive */
+::-webkit-scrollbar-thumb:window-inactive {
+  background: var(--clr-neon);
+  ;
+}

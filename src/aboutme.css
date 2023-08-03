@@ -1,0 +1,74 @@
+.intro{
+    width: 70%;
+    margin-top: 15%;
+    align-items: center;
+    background-color: transparent;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.line-2 {
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin-top: 100px; /* Adjust the distance from the navbar as per your requirement */
+    text-align: left;
+    padding-left: 80px; /* Adjust the left padding to create some distance from the left side */
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 180%;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+  
+  .anim-typewriter2 {
+    animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 20em;
+    }
+  }
+  
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+ /* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .intro {
+    width: 90%; /* Adjust the width for smaller screens */
+    margin-top: 10%; /* Adjust the top margin for smaller screens */
+    margin-left: 5%; /* Adjust the left margin for smaller screens */
+    margin-right: 5%; /* Adjust the right margin for smaller screens */
+    margin-bottom: 5%;
+  }
+
+  .line-2 {
+    font-size: 80%; /* Adjust the font size for smaller screens */
+    padding-left: 40px; /* Adjust the left padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .intro {
+    width: 95%;
+    
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 3%;
+  }
+
+  .line-2 {
+    align-items: center;
+    
+    word-wrap: break-word; /* Add this property to make the text wrap */
+  }
+}
