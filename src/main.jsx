@@ -8,7 +8,7 @@ import Projects from './Projects.jsx';
 
 import ErrorPage from './errorpage.jsx';
 import Home from './Home.jsx';
-import AboutMe from './aboutme.jsx';
+import AboutMe from './Aboutme.jsx';
 
 const routes = createBrowserRouter([
   {
