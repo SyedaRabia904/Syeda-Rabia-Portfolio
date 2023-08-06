@@ -26,7 +26,7 @@ const Contact = () => {
                     <p>Syeda Rabia</p>
                   </span>
                 </a></li>
-                <li class="linkedin"><a href="www.linkedin.com/in/syeda-rabia-b0157a286">
+                <li class="linkedin"><a href="https://www.linkedin.com/in/syeda-rabia-b0157a286">
                   <i class="fa fa-linkedin"></i>
                   <span>
 

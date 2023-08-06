@@ -32,7 +32,7 @@ function App() {
         
         <header>
           <nav class="navbar">
-            <img src="logo.png" alt="Logo"   className="logo" />
+            <img src="logo.png"  alt="Logo"   className="logo" />
             <ul class="nav-links">
               <input type="checkbox" id="checkbox_toggle" />
               <label for="checkbox_toggle" className="hamburger">&#9776;</label>
